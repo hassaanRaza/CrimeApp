@@ -1,26 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Crime from './screens/Crime';
+import {getCategories, getForces, getCrimes} from './config/Api';
 
 class App extends Component {
+
+  bhejoCategory(){
+
+  }
   render() {
+    //console.log('hello world');
+    //getCategories();
+    //getForces();
+    //getCrimes();
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Crime category={getCategories} forces={getForces} crimes={getCrimes}/>
     );
   }
 }
